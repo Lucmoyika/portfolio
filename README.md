@@ -25,10 +25,12 @@ git push
 - `loading="lazy"` sur les images, `defer` sur les scripts
 
 ## Domaine personnalisé (GitHub Student Pack)
-1. Choisir un domaine chez le fournisseur (ex: Namecheap via le pack).
-2. Ajouter un fichier `CNAME` à la racine contenant le domaine (ex: `www.mondomaine.com`).
-3. Configurer DNS: CNAME vers `lucmoyika.github.io`.
-4. Mettre à jour `canonical`, `og:url`, `twitter:image`, `robots.txt`, `sitemap.xml` avec le nouveau domaine.
+1. Domaine choisi: `www.lucmoyika.dev`.
+2. Fichier `CNAME` à la racine contenant `www.lucmoyika.dev`.
+3. DNS pour sous-domaine `www`: créer un enregistrement CNAME pointant vers `lucmoyika.github.io`.
+4. (Option) Si apex `lucmoyika.dev` doit aussi répondre: créer des enregistrements A/AAAA vers les IP GitHub Pages.
+5. Mettre à jour `canonical`, `og:url`, `twitter:image`, `robots.txt`, `sitemap.xml` avec `https://www.lucmoyika.dev`.
+6. GitHub → Settings → Pages: définir "Custom domain" à `www.lucmoyika.dev` et activer "Enforce HTTPS".
 
 ## Sitemaps et robots
 - robots.txt: autorise l’indexation et pointe vers le sitemap.
