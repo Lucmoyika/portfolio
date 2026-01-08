@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projets & Réalisations – Portfolio Luc Moyika | Développeur Web RDC</title>
-  <meta name="description" content="Détails et captures d'un projet du portfolio de Luc Moyika (lucmoyika, lucdjo moyika), développeur web freelance & designer créatif à Kinshasa, RDC.">
+  <title>Détails du projet – Portfolio Luc Moyika | Développeur Web</title>
+  <meta name="description" content="Étude de cas d’un projet: contexte, objectifs, rôle, stack, fonctionnalités, résultats, captures et liens (démo/GitHub).">
   <meta name="keywords" content="portfolio, portofolio, profil, profile, projets, projects, détails projet, réalisations, works, Luc Moyika, lucmoyika, luc moyika, luc-moyika, moyika, lucdjomoyika, lucdjo moyika, développeur web, web developer, designer, freelance, RDC, Kinshasa, Congo, DRC, site web, website, application web, e-commerce, PHP, Laravel, JavaScript">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.lucmoyika.tech/portfolio-details.html">
@@ -15,7 +15,7 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Détails du projet – Portfolio Luc Moyika">
-  <meta property="og:description" content="Aperçu, captures et informations d’un projet réalisé par Luc Moyika.">
+  <meta property="og:description" content="Aperçu, captures et informations clés d’un projet (étude de cas).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.lucmoyika.tech/portfolio-details.html">
   <meta property="og:image" content="https://www.lucmoyika.tech/assets/img/portfolio/app-1.jpg">
@@ -44,7 +44,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Données structurées JSON-LD (Breadcrumbs) -->
+  <!-- Données structurées JSON-LD (Breadcrumbs + Project) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,6 +63,22 @@
         "item": "https://www.lucmoyika.tech/portfolio-details.html"
       }
     ]
+  }
+  </script>
+  <script type="application/ld+json" id="project-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Projet",
+    "description": "Étude de cas d’un projet de Luc Moyika.",
+    "programmingLanguage": ["PHP", "JavaScript", "HTML", "CSS"],
+    "author": {
+      "@type": "Person",
+      "name": "Luc Moyika"
+    },
+    "codeRepository": "",
+    "url": "https://www.lucmoyika.tech/portfolio-details.html",
+    "image": "https://www.lucmoyika.tech/assets/img/portfolio/app-1.jpg"
   }
   </script>
 
@@ -122,11 +138,11 @@
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0" id="project-title">Détails du projet</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li class="current">Détails du projet</li>
           </ol>
         </nav>
       </div>
@@ -185,13 +201,35 @@
 
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-              <h2>This is an example of portfolio details</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              <h2 id="project-heading">Aperçu du projet</h2>
+              <p id="project-overview">
+                Présentation générale du projet: contexte, cible, objectifs et valeur ajoutée. Ajoutez ici un résumé clair (3-5 lignes) qui explique le pourquoi du projet et l’impact attendu.
               </p>
-              <p>
-                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
-              </p>
+
+              <h3>Rôle et responsabilités</h3>
+              <ul>
+                <li id="project-role">Mon rôle principal (ex: Développeur Full‑Stack, UX/UI, Intégrateur).</li>
+                <li>Responsabilités clés (ex: conception, architecture, dev features, tests, déploiement).</li>
+              </ul>
+
+              <h3>Stack & outils</h3>
+              <p id="project-stack">PHP/Laravel, JavaScript, Bootstrap 5, MySQL, GLightbox, Isotope…</p>
+
+              <h3>Fonctionnalités majeures</h3>
+              <ul id="project-features">
+                <li>Authentification et gestion des rôles</li>
+                <li>Tableaux de bord et reporting</li>
+                <li>Recherche/filtrage, export PDF/CSV</li>
+              </ul>
+
+              <h3>Défis & solutions</h3>
+              <p id="project-challenges">Expliquer un ou deux défis techniques/fonctionnels et comment vous les avez résolus.</p>
+
+              <h3>Résultats & métriques</h3>
+              <ul id="project-results">
+                <li>Temps de chargement réduit de 40%</li>
+                <li>+25% d’efficacité opérationnelle</li>
+              </ul>
 
               <div class="testimonial-item">
                 <p>
@@ -219,13 +257,14 @@
 
           <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Informations du projet</h3>
               <ul>
-                <li><strong>Category</strong> Web design</li>
-                <li><strong>Client</strong> ASU Company</li>
-                <li><strong>Project date</strong> 01 March, 2020</li>
-                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
-                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
+                <li><strong>Catégorie</strong> <span id="project-category">Application web</span></li>
+                <li><strong>Client</strong> <span id="project-client">—</span></li>
+                <li><strong>Date</strong> <time id="project-date">2025</time></li>
+                <li><strong>Démo</strong> <a href="#" id="project-demo" rel="noopener" target="_blank">Voir la démo</a></li>
+                <li><strong>GitHub</strong> <a href="#" id="project-repo" rel="noopener" target="_blank">Voir le code</a></li>
+                <li><a href="#" id="project-cta" class="btn-visit align-self-start">Visiter le site</a></li>
               </ul>
             </div>
           </div>
@@ -281,6 +320,105 @@
 
   <!-- Main JS File -->
   <script defer src="assets/js/main.js"></script>
+
+  <!-- Script: hydrater la page selon ?project=slug -->
+  <script>
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('project');
+      if(!slug) return;
+      // Mini mapping (placeholder). À terme, charger depuis un projects.json
+      const data = {
+        'somba-na-kin': {
+          title: 'E-commerce – Somba na Kin',
+          category: 'E-commerce',
+          date: '2025',
+          overview: 'Plateforme e-commerce axée sur la rapidité et la conversion.',
+          stack: 'Laravel, MySQL, Bootstrap 5, Alpine.js',
+          demo: '#',
+          repo: '#',
+          client: '—'
+        },
+        'gestion-ecole': {
+          title: 'Gestion Complète d’une École',
+          category: 'Éducation',
+          date: '2025',
+          overview: 'Solution centralisée: élèves, profs, notes, paiements, communications.',
+          stack: 'Laravel, MySQL, Bootstrap 5',
+          demo: '#',
+          repo: '#',
+          client: '—'
+        },
+        'ogefrem': {
+          title: 'Application OGEFREM',
+          category: 'Applications Web',
+          date: '2024',
+          overview: 'Gestion des interventions et suivi opérationnel.',
+          stack: 'PHP, JS, Bootstrap',
+          demo: '#',
+          repo: '#',
+          client: 'OGEFREM'
+        },
+        'enafep': {
+          title: 'Système de Publication ENAFEP',
+          category: 'Systèmes',
+          date: '2024',
+          overview: 'Publication des résultats avec forte charge et sécurité.',
+          stack: 'PHP, MySQL, Caching',
+          demo: '#',
+          repo: '#',
+          client: '—'
+        },
+        'nouveaux-nes': {
+          title: 'Gestion des Nouveaux Nés',
+          category: 'Éducation/Santé',
+          date: '2025',
+          overview: 'Traçabilité sécurisée des dossiers des nouveaux nés.',
+          stack: 'Laravel, MySQL, Bootstrap',
+          demo: '#',
+          repo: '#',
+          client: '—'
+        },
+        'gestion-financiere': {
+          title: 'Gestion Financière',
+          category: 'Applications Web',
+          date: '2025',
+          overview: 'Suivi des dépenses/recettes, budgets, rapports.',
+          stack: 'PHP, JS, Bootstrap',
+          demo: '#',
+          repo: '#',
+          client: '—'
+        }
+      }[slug];
+
+      if(!data) return;
+      const setText = (id, val) => { const el = document.getElementById(id); if(el && val) el.textContent = val; };
+      setText('project-title', data.title);
+      setText('project-heading', data.title);
+      setText('project-overview', data.overview);
+      setText('project-stack', data.stack);
+      setText('project-category', data.category);
+      setText('project-client', data.client);
+      const dateEl = document.getElementById('project-date'); if(dateEl) dateEl.textContent = data.date;
+      const demo = document.getElementById('project-demo'); if(demo) demo.href = data.demo;
+      const repo = document.getElementById('project-repo'); if(repo) repo.href = data.repo;
+      const cta  = document.getElementById('project-cta');  if(cta)  cta.href  = data.demo || '#';
+
+      // MAJ JSON-LD
+      const ld = document.getElementById('project-jsonld');
+      if(ld){
+        try {
+          const obj = JSON.parse(ld.textContent);
+          obj.name = data.title;
+          obj.description = data.overview;
+          obj.programmingLanguage = data.stack.split(',').map(s => s.trim());
+          obj.codeRepository = data.repo || '';
+          obj.url = window.location.href;
+          ld.textContent = JSON.stringify(obj);
+        } catch(e){}
+      }
+    })();
+  </script>
 
 </body>
 
