@@ -136,8 +136,8 @@
     }
 
     body.dark-mode {
-      background-color: #1a1a1a;
-      color: #e0e0e0;
+      background-color: #0f1419;
+      color: #e8e8e8;
       color-scheme: dark;
     }
 
@@ -145,49 +145,260 @@
       color-scheme: dark;
     }
 
+    /* Header et Navigation */
     body.dark-mode header,
+    body.dark-mode .header {
+      background-color: #1a1f2e !important;
+      border-bottom: 1px solid #2a2f3e;
+    }
+
     body.dark-mode nav,
+    body.dark-mode .navmenu {
+      background-color: #1a1f2e !important;
+    }
+
+    body.dark-mode nav a,
+    body.dark-mode .navmenu a {
+      color: #e8e8e8 !important;
+    }
+
+    body.dark-mode nav a:hover,
+    body.dark-mode .navmenu a:hover {
+      color: #5900e8 !important;
+    }
+
+    /* Footer */
     body.dark-mode footer {
-      background-color: #121212;
-      border-color: #333;
+      background-color: #1a1f2e !important;
+      border-top: 1px solid #2a2f3e;
+      color: #e8e8e8;
     }
 
+    body.dark-mode footer a {
+      color: #64b5f6 !important;
+    }
+
+    body.dark-mode footer a:hover {
+      color: #90caf9 !important;
+    }
+
+    /* Sections générales */
     body.dark-mode section {
-      background-color: #1a1a1a;
-      color: #e0e0e0;
+      background-color: #0f1419 !important;
+      color: #e8e8e8;
     }
 
+    body.dark-mode section.dark-background {
+      background-color: #1a1f2e !important;
+    }
+
+    body.dark-mode .section-title h2 {
+      color: #e8e8e8;
+    }
+
+    body.dark-mode .section-title p {
+      color: #b8b8b8;
+    }
+
+    /* Cartes et Conteneurs */
     body.dark-mode .card,
+    body.dark-mode .portfolio-item,
     body.dark-mode .portfolio-details,
-    body.dark-mode .resume-item {
-      background-color: #252525;
-      color: #e0e0e0;
-      border-color: #333;
+    body.dark-mode .resume-item,
+    body.dark-mode .service-item,
+    body.dark-mode .info-item,
+    body.dark-mode .portfolio-info {
+      background-color: #1a1f2e !important;
+      color: #e8e8e8;
+      border: 1px solid #2a2f3e;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
     }
 
-    body.dark-mode a:not(.btn) {
+    body.dark-mode .card:hover,
+    body.dark-mode .portfolio-item:hover,
+    body.dark-mode .service-item:hover {
+      box-shadow: 0 6px 20px rgba(89, 0, 232, 0.3) !important;
+      transform: translateY(-5px);
+    }
+
+    /* Texte et titres */
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6 {
+      color: #f0f0f0;
+    }
+
+    body.dark-mode p {
+      color: #d0d0d0;
+    }
+
+    body.dark-mode strong,
+    body.dark-mode .strong {
+      color: #f0f0f0;
+    }
+
+    /* Liens */
+    body.dark-mode a:not(.btn):not(.social-links a) {
       color: #64b5f6;
     }
 
-    body.dark-mode a:not(.btn):hover {
+    body.dark-mode a:not(.btn):not(.social-links a):hover {
       color: #90caf9;
     }
 
+    body.dark-mode .social-links a {
+      color: #e8e8e8;
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode .social-links a:hover {
+      color: #5900e8;
+      transform: scale(1.15);
+    }
+
+    /* Formulaires et Entrées */
     body.dark-mode input,
     body.dark-mode textarea,
-    body.dark-mode select {
-      background-color: #252525;
-      color: #e0e0e0;
-      border-color: #444;
+    body.dark-mode select,
+    body.dark-mode .form-control {
+      background-color: #252b3a !important;
+      color: #e8e8e8 !important;
+      border: 1px solid #3a3f4e !important;
+    }
+
+    body.dark-mode input:focus,
+    body.dark-mode textarea:focus,
+    body.dark-mode select:focus,
+    body.dark-mode .form-control:focus {
+      background-color: #2a2f3e !important;
+      border-color: #5900e8 !important;
+      color: #e8e8e8 !important;
+      box-shadow: 0 0 0 0.2rem rgba(89, 0, 232, 0.25) !important;
     }
 
     body.dark-mode input::placeholder,
     body.dark-mode textarea::placeholder {
-      color: #999;
+      color: #888;
+    }
+
+    /* Barres de progression */
+    body.dark-mode .progress {
+      background-color: #252b3a;
+      border: 1px solid #3a3f4e;
     }
 
     body.dark-mode .progress-bar {
       background-color: #5900e8;
+      box-shadow: 0 0 10px rgba(89, 0, 232, 0.4);
+    }
+
+    /* Boutons */
+    body.dark-mode .btn {
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode .btn-primary {
+      background-color: #5900e8;
+      border-color: #5900e8;
+    }
+
+    body.dark-mode .btn-primary:hover {
+      background-color: #6b1aff;
+      border-color: #6b1aff;
+      box-shadow: 0 0 15px rgba(89, 0, 232, 0.5);
+    }
+
+    body.dark-mode .btn-secondary {
+      background-color: #2a2f3e;
+      border-color: #5900e8;
+      color: #5900e8;
+    }
+
+    body.dark-mode .btn-secondary:hover {
+      background-color: #5900e8;
+      color: #fff;
+    }
+
+    /* Portfolio items - Shadow importante */
+    body.dark-mode .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    body.dark-mode .portfolio-item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(89, 0, 232, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+      pointer-events: none;
+    }
+
+    body.dark-mode .portfolio-item img {
+      filter: brightness(0.9);
+    }
+
+    /* Testimonials */
+    body.dark-mode .testimonial-item {
+      background-color: #1a1f2e !important;
+      border-left: 3px solid #5900e8;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    body.dark-mode .testimonial-item p {
+      color: #d0d0d0;
+    }
+
+    body.dark-mode .testimonial-item h3,
+    body.dark-mode .testimonial-item h4 {
+      color: #f0f0f0;
+    }
+
+    /* Breadcrumbs */
+    body.dark-mode .breadcrumbs {
+      background-color: #1a1f2e !important;
+    }
+
+    body.dark-mode .breadcrumbs a {
+      color: #64b5f6;
+    }
+
+    body.dark-mode .breadcrumbs .current {
+      color: #e8e8e8;
+    }
+
+    /* Tables */
+    body.dark-mode table {
+      background-color: #1a1f2e;
+      color: #e8e8e8;
+    }
+
+    body.dark-mode thead th {
+      background-color: #252b3a;
+      color: #f0f0f0;
+      border-color: #3a3f4e;
+    }
+
+    body.dark-mode tbody tr {
+      border-color: #3a3f4e;
+    }
+
+    body.dark-mode tbody tr:hover {
+      background-color: #252b3a;
+    }
+
+    /* Preloader et overlays */
+    body.dark-mode #preloader {
+      background-color: #0f1419;
+    }
+
+    body.dark-mode .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     /* Bouton toggle mode sombre */
@@ -217,8 +428,13 @@
       color: #ffd700;
     }
 
-    body.dark-mode .dark-mode-toggle i::before {
-      content: "\f185";
+    body.dark-mode .dark-mode-toggle:hover {
+      background-color: rgba(255, 215, 0, 0.1);
+    }
+
+    /* Animations et transitions */
+    body.dark-mode * {
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
   </style>
 
