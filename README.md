@@ -38,5 +38,18 @@ git push
 
 ## Maintenance
 - Ajouter les mêmes balises SEO à toute nouvelle page.
-- Optimiser les images (WebP/AVIF, dimensions `width`/`height`).# portfolio
+- Optimiser les images (WebP/AVIF, dimensions `width`/`height`).
+- Voir [OPTIMIZE.md](OPTIMIZE.md) pour le guide complet d'optimisation.
+
+## Performance
+- Images: lazy-loading activé, formats WebP recommandés (voir OPTIMIZE.md).
+- Scripts: `defer` sur tous les JS.
+- CSS: preload pour le fichier principal.
+- Tests: PageSpeed Insights, GTmetrix.
+
+## Analytics et Search Console
+- Google Search Console: soumettre le sitemap pour indexation.
+- Bing Webmaster Tools: importer depuis Google.
+- Analytics optionnel: Plausible (privacy-first) ou GA4.
+- Détails dans [OPTIMIZE.md](OPTIMIZE.md).# portfolio
 Portfolio de développeur web mettant en avant mes projets, compétences et services professionnels.
