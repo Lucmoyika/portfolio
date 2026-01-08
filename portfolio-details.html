@@ -326,11 +326,58 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">DevFolio</h1>
+      <a href="index.html" class="logo d-flex align-items-center"
+        style="text-decoration:none; transition: all 0.3s ease;">
+
+        <!-- Icône avec style modernisé -->
+        <i class="bi bi-code-slash logo-icon"></i>
+
+        <!-- Texte Logo -->
+        <h1 class="sitename">
+          <span class="part1">Portfolio</span><span class="part2">Luc</span>
+        </h1>
       </a>
+
+      <style>
+        /* Icône style */
+        .logo-icon {
+          background: #5900e8;
+          border-radius: 10px;
+          padding: 6px 10px;
+          font-size: 23px;
+          color: #ffffff;
+          margin-right: 6px;
+          transition: all 0.3s ease;
+        }
+
+        /* Texte logo */
+        .sitename {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 800;
+          font-size: 26px;
+          color: #f6f6f7;
+          margin: 0;
+          transition: all 0.3s ease;
+        }
+
+        .sitename .part1 {
+          color: #5900e8;
+        }
+
+        .sitename .part2 {
+          color: #f2f3f3;
+        }
+
+        /* Effet interactif au hover */
+        .logo:hover .logo-icon {
+          transform: scale(1.05);
+        }
+
+        .logo:hover .sitename {
+          letter-spacing: 1px;
+          transform: scale(1.05);
+        }
+      </style>
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -504,7 +551,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>2025</span> <strong class="px-1 sitename">Moyika Mbala Luc</strong> <span>Tous droits réservés</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
