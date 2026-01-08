@@ -337,7 +337,8 @@
           stack: 'Laravel, MySQL, Bootstrap 5, Alpine.js',
           demo: '#',
           repo: '#',
-          client: '—'
+          client: '—',
+          images: ['assets/img/portfolio/somba-na-kin.PNG']
         },
         'gestion-ecole': {
           title: 'Gestion Complète d’une École',
@@ -347,7 +348,8 @@
           stack: 'Laravel, MySQL, Bootstrap 5',
           demo: '#',
           repo: '#',
-          client: '—'
+          client: '—',
+          images: ['assets/img/portfolio/Gestion-ecole.PNG']
         },
         'ogefrem': {
           title: 'Application OGEFREM',
@@ -357,7 +359,8 @@
           stack: 'PHP, JS, Bootstrap',
           demo: '#',
           repo: '#',
-          client: 'OGEFREM'
+          client: 'OGEFREM',
+          images: ['assets/img/portfolio/Resolve-intervensions.PNG']
         },
         'enafep': {
           title: 'Système de Publication ENAFEP',
@@ -367,7 +370,8 @@
           stack: 'PHP, MySQL, Caching',
           demo: '#',
           repo: '#',
-          client: '—'
+          client: '—',
+          images: ['assets/img/portfolio/Etelo-rdc.PNG']
         },
         'nouveaux-nes': {
           title: 'Gestion des Nouveaux Nés',
@@ -377,7 +381,8 @@
           stack: 'Laravel, MySQL, Bootstrap',
           demo: '#',
           repo: '#',
-          client: '—'
+          client: '—',
+          images: ['assets/img/portfolio/gestion-nouveaux-nes.PNG']
         },
         'gestion-financiere': {
           title: 'Gestion Financière',
@@ -387,7 +392,8 @@
           stack: 'PHP, JS, Bootstrap',
           demo: '#',
           repo: '#',
-          client: '—'
+          client: '—',
+          images: ['assets/img/portfolio/Gestion-financiere.PNG']
         }
       }[slug];
 
@@ -403,6 +409,33 @@
       const demo = document.getElementById('project-demo'); if(demo) demo.href = data.demo;
       const repo = document.getElementById('project-repo'); if(repo) repo.href = data.repo;
       const cta  = document.getElementById('project-cta');  if(cta)  cta.href  = data.demo || '#';
+
+      // Masquer les éléments si pas de liens valides
+      const hideIfHash = (el) => { if(el && (!el.href || el.getAttribute('href') === '#')) el.closest('li')?.remove(); };
+      hideIfHash(demo);
+      hideIfHash(repo);
+      if(cta && (!cta.href || cta.getAttribute('href') === '#')) cta.remove();
+
+      // Mettre à jour le document.title
+      try { document.title = data.title + ' – Portfolio Luc Moyika'; } catch(e) {}
+
+      // Remplir le slider avec les images du projet
+      try {
+        const wrapper = document.querySelector('.portfolio-details-slider .swiper-wrapper');
+        if (wrapper && Array.isArray(data.images) && data.images.length) {
+          wrapper.innerHTML = '';
+          data.images.forEach((src) => {
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide';
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = data.title;
+            img.loading = 'lazy';
+            slide.appendChild(img);
+            wrapper.appendChild(slide);
+          });
+        }
+      } catch(e) {}
 
       // MAJ JSON-LD
       const ld = document.getElementById('project-jsonld');
