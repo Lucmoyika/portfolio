@@ -575,7 +575,7 @@
 
     /* Mobile nav responsive dark mode */
     body.dark-mode .mobile-nav-active .navmenu {
-      background: rgba(15, 20, 25, 0.95) !important;
+      background: #1a1f2e !important;
     }
 
     body.dark-mode .mobile-nav-active .mobile-nav-toggle {
@@ -594,6 +594,17 @@
 
     body.dark-mode .mobile-nav-active .navmenu a:hover {
       color: #5900e8 !important;
+    }
+
+    /* Dropdown links visibility in mobile dark mode */
+    body.dark-mode .mobile-nav-active ul.dropdown-active li a {
+      color: #d0d0d0 !important;
+      padding: 10px 20px;
+    }
+
+    body.dark-mode .mobile-nav-active ul.dropdown-active li a:hover {
+      color: #5900e8 !important;
+      background-color: rgba(89, 0, 232, 0.1) !important;
     }
 
     body.dark-mode .mobile-nav-active .navmenu .dropdown>.dropdown-active {
@@ -616,6 +627,11 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       border-radius: 8px;
       z-index: 9999;
+    }
+
+    .navmenu li.dropdown > ul li a {
+      padding: 10px 20px;
+      display: block;
     }
 
     .navmenu li.dropdown:hover > ul {
