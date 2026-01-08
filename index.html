@@ -632,6 +632,14 @@
     .navmenu li.dropdown > ul li a {
       padding: 10px 20px;
       display: block;
+      color: #333 !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .navmenu li.dropdown > ul li a:hover {
+      background-color: #f5f5f5;
+      color: #5900e8 !important;
     }
 
     .navmenu li.dropdown:hover > ul {
@@ -641,6 +649,18 @@
     /* Mobile dropdown active state */
     ul.dropdown-active {
       display: block !important;
+    }
+
+    /* Mobile dropdown links light mode */
+    .mobile-nav-active ul.dropdown-active li a {
+      color: #333 !important;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    .mobile-nav-active ul.dropdown-active li a:hover {
+      background-color: #f5f5f5;
+      color: #5900e8 !important;
     }
 
     .navmenu li.dropdown > ul li {
