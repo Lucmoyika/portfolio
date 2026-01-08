@@ -693,10 +693,18 @@
       background-color: #0f1419 !important;
     }
 
-    body.dark-mode .contact .info-item {
+    body.dark-mode .contact .info-wrap {
       background-color: #1a1f2e !important;
       border: 1px solid #2a2f3e !important;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    body.dark-mode .contact .info-item {
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none;
     }
 
     body.dark-mode .contact .info-item i {
@@ -712,17 +720,22 @@
     }
 
     /* Contact form */
+    body.dark-mode .php-email-form,
     body.dark-mode .contact-form {
       background-color: #1a1f2e !important;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 8px;
       border: 1px solid #2a2f3e;
     }
 
+    body.dark-mode .php-email-form label,
     body.dark-mode .contact-form .form-group label {
       color: #e8e8e8;
     }
 
+    body.dark-mode .php-email-form input,
+    body.dark-mode .php-email-form textarea,
+    body.dark-mode .php-email-form select,
     body.dark-mode .contact-form .form-group input,
     body.dark-mode .contact-form .form-group textarea,
     body.dark-mode .contact-form .form-group select {
@@ -731,18 +744,36 @@
       border: 1px solid #3a3f4e !important;
     }
 
+    body.dark-mode .php-email-form input::placeholder,
+    body.dark-mode .php-email-form textarea::placeholder,
     body.dark-mode .contact-form .form-group input::placeholder,
     body.dark-mode .contact-form .form-group textarea::placeholder {
       color: #b0b0b0 !important;
       opacity: 1 !important;
     }
 
+    body.dark-mode .php-email-form input:focus,
+    body.dark-mode .php-email-form textarea:focus,
+    body.dark-mode .php-email-form select:focus,
     body.dark-mode .contact-form .form-group input:focus,
     body.dark-mode .contact-form .form-group textarea:focus,
     body.dark-mode .contact-form .form-group select:focus {
       background-color: #2a2f3e !important;
       border-color: #5900e8 !important;
       box-shadow: 0 0 0 0.2rem rgba(89, 0, 232, 0.25) !important;
+    }
+
+    body.dark-mode .php-email-form button[type="submit"] {
+      background-color: #5900e8 !important;
+      color: #fff !important;
+      border: none;
+      padding: 12px 40px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    body.dark-mode .php-email-form button[type="submit"]:hover {
+      background-color: #7000ff !important;
     }
 
     body.dark-mode .loading {
