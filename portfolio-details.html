@@ -44,6 +44,196 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Mode sombre */
+    :root {
+      color-scheme: light;
+    }
+
+    body.dark-mode {
+      background-color: #0f1419;
+      color: #e8e8e8;
+      color-scheme: dark;
+    }
+
+    body.dark-mode * {
+      color-scheme: dark;
+    }
+
+    /* Header et Navigation */
+    body.dark-mode header,
+    body.dark-mode .header {
+      background-color: #1a1f2e !important;
+      border-bottom: 1px solid #2a2f3e;
+    }
+
+    body.dark-mode nav,
+    body.dark-mode .navmenu {
+      background-color: #1a1f2e !important;
+    }
+
+    body.dark-mode nav a,
+    body.dark-mode .navmenu a {
+      color: #e8e8e8 !important;
+    }
+
+    body.dark-mode nav a:hover,
+    body.dark-mode .navmenu a:hover {
+      color: #5900e8 !important;
+    }
+
+    /* Footer */
+    body.dark-mode footer {
+      background-color: #1a1f2e !important;
+      border-top: 1px solid #2a2f3e;
+      color: #e8e8e8;
+    }
+
+    body.dark-mode footer a {
+      color: #64b5f6 !important;
+    }
+
+    body.dark-mode footer a:hover {
+      color: #90caf9 !important;
+    }
+
+    /* Sections générales */
+    body.dark-mode section {
+      background-color: #0f1419 !important;
+      color: #e8e8e8;
+    }
+
+    body.dark-mode .page-title {
+      background-color: #1a1f2e !important;
+      border-bottom: 1px solid #2a2f3e;
+    }
+
+    body.dark-mode .page-title h1 {
+      color: #f0f0f0;
+    }
+
+    body.dark-mode .breadcrumbs {
+      background-color: transparent !important;
+    }
+
+    body.dark-mode .breadcrumbs a {
+      color: #64b5f6;
+    }
+
+    body.dark-mode .breadcrumbs .current {
+      color: #e8e8e8;
+    }
+
+    /* Cartes et Conteneurs */
+    body.dark-mode .portfolio-details,
+    body.dark-mode .portfolio-info,
+    body.dark-mode .portfolio-description {
+      background-color: #1a1f2e !important;
+      color: #e8e8e8;
+      border: 1px solid #2a2f3e;
+    }
+
+    /* Texte et titres */
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6 {
+      color: #f0f0f0;
+    }
+
+    body.dark-mode p {
+      color: #d0d0d0;
+    }
+
+    body.dark-mode strong {
+      color: #f0f0f0;
+    }
+
+    body.dark-mode ul li {
+      color: #d0d0d0;
+    }
+
+    /* Liens */
+    body.dark-mode a:not(.btn) {
+      color: #64b5f6;
+    }
+
+    body.dark-mode a:not(.btn):hover {
+      color: #90caf9;
+    }
+
+    /* Boutons */
+    body.dark-mode .btn-visit {
+      background-color: #5900e8;
+      color: #fff;
+    }
+
+    body.dark-mode .btn-visit:hover {
+      background-color: #6b1aff;
+    }
+
+    /* Testimonials */
+    body.dark-mode .testimonial-item {
+      background-color: #1a1f2e !important;
+      border-left: 3px solid #5900e8;
+    }
+
+    /* Swiper */
+    body.dark-mode .swiper-button-prev,
+    body.dark-mode .swiper-button-next {
+      color: #5900e8;
+    }
+
+    body.dark-mode .swiper-pagination-bullet-active {
+      background-color: #5900e8;
+    }
+
+    /* Bouton toggle mode sombre */
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: #272829;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      transform: scale(1.1);
+    }
+
+    body.dark-mode .dark-mode-toggle {
+      color: #ffd700;
+    }
+
+    body.dark-mode .dark-mode-toggle:hover {
+      background-color: rgba(255, 215, 0, 0.1);
+    }
+
+    /* Mobile nav toggle */
+    body.dark-mode .mobile-nav-toggle {
+      color: #e8e8e8 !important;
+    }
+
+    body.dark-mode .social-links a {
+      color: #e8e8e8;
+    }
+
+    body.dark-mode .social-links a:hover {
+      color: #5900e8;
+    }
+  </style>
+
   <!-- Données structurées JSON-LD (Breadcrumbs + Project) -->
   <script type="application/ld+json">
   {
@@ -104,28 +294,16 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home<br></a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
+          <li><a href="index.html#hero">Accueil</a></li>
+          <li><a href="index.html#about">À propos</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li>
+            <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Basculer le mode sombre" title="Mode sombre/clair">
+              <i class="bi bi-moon"></i>
+            </button>
           </li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -320,6 +498,42 @@
 
   <!-- Main JS File -->
   <script defer src="assets/js/main.js"></script>
+
+  <!-- Mode sombre (Dark Mode) -->
+  <script>
+    (function() {
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const htmlElement = document.documentElement;
+      const bodyElement = document.body;
+
+      // Récupérer la préférence sauvegardée ou la préférence système
+      const savedMode = localStorage.getItem('darkMode');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDarkMode = savedMode ? JSON.parse(savedMode) : prefersDark;
+
+      // Appliquer le mode au chargement
+      if (isDarkMode) {
+        bodyElement.classList.add('dark-mode');
+        htmlElement.style.colorScheme = 'dark';
+      }
+
+      // Écouter le clic sur le bouton toggle
+      darkModeToggle.addEventListener('click', function() {
+        bodyElement.classList.toggle('dark-mode');
+        const isDark = bodyElement.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', JSON.stringify(isDark));
+        htmlElement.style.colorScheme = isDark ? 'dark' : 'light';
+      });
+
+      // Écouter les changements de préférence système
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('darkMode')) {
+          bodyElement.classList.toggle('dark-mode', e.matches);
+          htmlElement.style.colorScheme = e.matches ? 'dark' : 'light';
+        }
+      });
+    })();
+  </script>
 
   <!-- Script: hydrater la page selon ?project=slug -->
   <script>
