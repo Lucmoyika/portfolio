@@ -242,6 +242,12 @@
       display: block;
     }
 
+    /* Mobile dropdown active state */
+    .navmenu li.dropdown.active > ul,
+    ul.dropdown-active {
+      display: block !important;
+    }
+
     .navmenu li.dropdown > ul li {
       padding: 0;
       margin: 0;
@@ -258,6 +264,12 @@
     body.dark-mode .navmenu .dropdown ul a:hover {
       color: #5900e8 !important;
       background-color: rgba(89, 0, 232, 0.1) !important;
+    }
+
+    /* Dark mode dropdown active state */
+    body.dark-mode ul.dropdown-active {
+      display: block !important;
+      background-color: #252b3a !important;
     }
 
     /* Mobile nav responsive dark mode */
