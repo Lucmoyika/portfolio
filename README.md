@@ -48,8 +48,8 @@ git push
 - Tests: PageSpeed Insights, GTmetrix.
 
 ## Analytics et Search Console
-- Google Search Console: soumettre le sitemap pour indexation.
-- Bing Webmaster Tools: importer depuis Google.
-- Analytics optionnel: Plausible (privacy-first) ou GA4.
-- Détails dans [OPTIMIZE.md](OPTIMIZE.md).# portfolio
+- **Google Search Console**: soumettre le sitemap pour indexation → voir [GOOGLE_SEARCH_CONSOLE.md](GOOGLE_SEARCH_CONSOLE.md)
+- **Bing Webmaster Tools**: importer depuis Google
+- **Analytics optionnel**: Plausible (privacy-first) ou GA4
+- **Optimisations**: voir [OPTIMIZE.md](OPTIMIZE.md)# portfolio
 Portfolio de développeur web mettant en avant mes projets, compétences et services professionnels.
