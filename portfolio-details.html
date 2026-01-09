@@ -266,22 +266,9 @@
       display: block;
     }
 
-    /* Mobile dropdown active state */
-    .navmenu li.dropdown.active > ul,
-    ul.dropdown-active {
+    /* Mobile dropdown active state - must be more specific than .navmenu li.dropdown > ul */
+    .navmenu li.dropdown > ul.dropdown-active {
       display: block !important;
-    }
-
-    /* Mobile dropdown links light mode */
-    .mobile-nav-active ul.dropdown-active li a {
-      color: #333 !important;
-      padding: 10px 20px;
-      display: block;
-    }
-
-    .mobile-nav-active ul.dropdown-active li a:hover {
-      background-color: #f5f5f5;
-      color: #5900e8 !important;
     }
 
     .navmenu li.dropdown > ul li {
@@ -303,7 +290,7 @@
     }
 
     /* Dark mode dropdown active state */
-    body.dark-mode ul.dropdown-active {
+    body.dark-mode .navmenu li.dropdown > ul.dropdown-active {
       display: block !important;
       background-color: #252b3a !important;
     }
