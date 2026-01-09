@@ -617,20 +617,37 @@
     }
 
     .navmenu li.dropdown > ul {
-      display: none;
       position: absolute;
-      left: 0;
-      top: 100%;
+      left: 0 !important;
+      top: 100% !important;
       min-width: 240px;
-      background: #fff;
+      background: #fff !important;
       padding: 10px 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
       border-radius: 8px;
-      z-index: 9999;
+      z-index: 9999 !important;
       visibility: visible !important;
       opacity: 1 !important;
       margin: 0 !important;
-      left: 0 !important;
+      transition: none !important;
+    }
+
+    /* Hide dropdown by default on mobile, show only when dropdown-active */
+    @media (max-width: 1200px) {
+      .navmenu li.dropdown > ul {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .navmenu li.dropdown > ul.dropdown-active {
+        max-height: 500px;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto;
+      }
     }
 
     .navmenu li.dropdown > ul li a {
